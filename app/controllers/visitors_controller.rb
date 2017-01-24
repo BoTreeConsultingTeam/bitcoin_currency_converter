@@ -4,7 +4,7 @@ class VisitorsController < ApplicationController
     @Currency = JSON.parse(Net::HTTP.get(URI.parse(redirected_api_url)))
   end
 
-  def convert
+  def to_bitcoin
     uri = URI.parse("https://blockchain.info/tobtc?currency=#{params[:currency]}&value=#{params[:value]}")
     @response = Net::HTTP.get(uri)
     render :json => @response

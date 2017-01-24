@@ -1,0 +1,26 @@
+<h3>Convert Bitcoin to Currency</h3>
+
+<div class="row">
+  <div class = "col-sm-3">
+    <span class="label label-default">Enter Bitcoin </span>
+    <%= number_field_tag :bitcoin_value,"", class: 'form-control' %>
+  </div>
+
+  <div class="col-sm-3"> 
+    <span class="label label-default">Select Currency</span>
+    <%= select_tag 'BCurrency', options_for_select(@Currency.keys),class:'form-control' %> 
+  </div>
+ 
+  <div class = "col-sm-3">
+    <span class="label label-default">Bitcoin to Currency</span>
+    <%= submit_tag "Submit", :id => "bittocurrency", :class => "form-control" %>
+  </div>
+</div>
+
+<br><br>
+<div class="row ">
+  <div class="col-sm-10 text-center">
+    <h3 id="bit_to_curr"/> 
+  </div>
+</div>
+<br><br>

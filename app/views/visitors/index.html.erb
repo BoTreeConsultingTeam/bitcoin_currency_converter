@@ -1,17 +1,17 @@
-<h3>Convert Currency to bit coin</h3>
+<h3>Convert Currency to Bitcoin</h3>
 <div class="row">
   <div class="col-sm-3"> 
    <span class="label label-default">Select Currency</span>
-    <%= select_tag 'Currency', options_for_select(@Currency.keys),class:'form-control' %> 
-  </div>
-  <div class = "col-sm-3">
-    <span class="label label-default">Enter Value</span>
-    <%= text_field_tag :value,"", class: 'form-control' %>
-  </div>
-  <div class = "col-sm-3">
-   <span class="label label-default">Convert to Bitcoin</span>
-    <%= submit_tag "Submit", :id => "convert", :class => "form-control" %>
-  </div>
+   <%= select_tag 'Currency', options_for_select(@Currency.keys),class:'form-control' %> 
+ </div>
+ <div class = "col-sm-3">
+  <span class="label label-default">Enter Value</span>
+  <%= text_field_tag :value,"", class: 'form-control' %>
+</div>
+<div class = "col-sm-3">
+ <span class="label label-default">Convert to Bitcoin</span>
+ <%= submit_tag "Submit", :id => "convert", :class => "form-control" %>
+</div>
 </div>
 <br><br>
 <div class="row ">
@@ -20,7 +20,7 @@
   </div>
 </div>
 <script type="text/javascript">
-  $(document).ready(function()   
+  $(document).ready(function()
   {
     $('#convert').on("click",function(){
       if($('#value').val().length>0){
@@ -29,13 +29,12 @@
           $( "#result" ).empty().append( $('#Currency').val()+" To Bitcoin :- " + data );
         })
         .fail(function() {
-          alert( "Invalid Numerical Value" );
+          alert( "Invalid Value" );
         });
       }
       else{
         alert("Enter Value");
       }
     });
-
-  });   
+  });
 </script>

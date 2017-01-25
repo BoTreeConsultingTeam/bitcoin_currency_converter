@@ -1,12 +1,9 @@
 class ConversionController < ApplicationController
-  def to_bitcoin
-    url = "https://blockchain.info/tobtc?currency=#{params[:currency]}&value=#{params[:value]}"
-    response = CurrencyConversionService.new(url).make_get_request
-    render :json => response
+  def currency_to_bitcoin
+    render :json => CurrencyConversionService.new(params).currency_to_bitcoin
   end
 
-  def bit_to_currency
-    url = "https://bitpay.com/api/rates"
-    render :json =>  CurrencyConversionService.new(url).check_code_and_get_rate(params[:value].to_i,params[:currency]),  status: 200
+  def bitcoin_to_currency
+    render :json =>  CurrencyConversionService.new(params).bitcoin_to_currency
   end
 end

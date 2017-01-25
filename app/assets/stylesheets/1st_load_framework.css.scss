@@ -43,3 +43,22 @@ section {
   @extend .row;
   margin-top: 20px;
 }
+.footer {
+  background: black none repeat scroll 0 0;
+  margin-top: 352px;
+  color: white;
+  height: 35px;
+}
+a,a:focus,a:hover{
+  color: white;
+  text-decoration: none;
+}
+.padding{
+  margin-top: 32px;
+}
+.github-fork-ribbon::before {
+  background-color: #f80 !important;
+}
+.github-fork-ribbon::before, .github-fork-ribbon::after {
+  height: 2.54em !important;
+}

@@ -5,13 +5,16 @@ html
     title
       = content_for?(:title) ? yield(:title) : 'Convert To Bitcoin'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Convert To Bitcoin'}"
+    link href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" rel="stylesheet" /
     == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => 'reload'
     == javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
     script[src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"]
     == csrf_meta_tags
   body
-    header
-      == render 'layouts/navigation'
+    a.github-fork-ribbon href="https://github.com/ShaileshPrajapati-BTC/ConvertToBitcoin" title=("Fork me on GitHub")  Fork me on GitHub
+    / header
+    /   == render 'layouts/navigation'
     main[role="main"]
       == render 'layouts/messages'
       == yield
+    == render 'layouts/footer'

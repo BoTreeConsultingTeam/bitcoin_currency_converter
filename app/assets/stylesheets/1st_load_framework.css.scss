@@ -43,12 +43,6 @@ section {
   @extend .row;
   margin-top: 20px;
 }
-.footer {
-  background: black none repeat scroll 0 0;
-  margin-top: 352px;
-  color: white;
-  height: 35px;
-}
 a,a:focus,a:hover{
   color: white;
   text-decoration: none;
@@ -61,4 +55,33 @@ a,a:focus,a:hover{
 }
 .github-fork-ribbon::before, .github-fork-ribbon::after {
   height: 2.54em !important;
+}
+.form-control.btn-success:focus{
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+  box-shadow: none;
+  color: #fff;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  background: black none repeat scroll 0 0;
+  margin-top: 352px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  line-height: 35px;
+  width: 100%;
+}
+.red{
+  color: #f00;
+  font-size: 22px;
 }

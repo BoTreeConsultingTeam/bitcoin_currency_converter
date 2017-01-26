@@ -3,24 +3,26 @@ html
   head
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
     title
-      = content_for?(:title) ? yield(:title) : 'Converter For Bitcoin'
+      = content_for?(:title) ? yield(:title) : 'Converter For Bitcoin'      
+    meta name="robots" content="noodp"/
+    meta content='1227770719' property='fb:admins'/
     meta content="systemlord.me" name="author" /
     meta property="og:title" content="Converter For Bitcoin: convert bintcoin to currency and vice versa"/
     meta name="twitter:title" content="Converter For Bitcoin: convert bintcoin to currency and vice versa"/
+    meta name="twitter:description" content="Converter For Bitcoin: convert bintcoin to currency and vice versa"/
+    meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Converter For Bitcoin: convert bintcoin to currency and vice versa'}"
     meta content="website" property="og:type" /
     meta content="https://converttobitcoin.herokuapp.com/" property="og:url" /
     meta content=("converttobitcoin.herokuapp.com India") property="og:site_name" /
     meta content="en_IN" property="og:locale" /
     meta content="convert bintcoin to currency and vice versa" property="og:description" /
 
-    meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Converter For Bitcoin'}"
-    
     link href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" rel="stylesheet" /
     == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => 'reload'
     == javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
     == csrf_meta_tags
   body
-    a.github-fork-ribbon href="https://github.com/ShaileshPrajapati-BTC/ConvertToBitcoin" title = ("Fork me on GitHub") target = "_blank" Fork me on GitHub
+    a.github-fork-ribbon href="https://github.com/BoTreeConsultingTeam/bitcoin_currency_converter" title = ("Fork me on GitHub") target = "_blank" Fork me on GitHub
     / header
     /   == render 'layouts/navigation'
     main[role="main"]

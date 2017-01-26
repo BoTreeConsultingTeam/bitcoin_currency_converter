@@ -1,4 +1,4 @@
-StormPathApp
+Bitcoin Currency Converter
 ================
 
 This application is created to convert Bitcoin to currency and currency to Bitcoin using API [Bitcoin API](

@@ -1,13 +1,13 @@
-h3 Convert Bitcoin to Currency
-.row
-  .col-sm-3
-    span.label.label-default Enter Bitcoin
-    = number_field_tag :bitcoin_value,"1", class: 'form-control', :min => 1, :step => 'any', :required => true
-  .col-sm-3
-    span.label.label-default Select Currency
-    = select_tag 'BCurrency', options_for_select(currency_code_with_name),class:'form-control'
-  .col-sm-3
-    span.label.label-default Bitcoin to Currency
-    = submit_tag "Submit", :id => "bittocurrency", :class => "form-control btn btn-success"
-  .col-sm-3.text-center.padding
-    h6#bit_to_curr
+.panel.panel-info
+  .panel-heading
+    Convert Bitcoin to Currency
+  .panel-body
+    .row
+      .col-sm-3
+        = number_field_tag :bitcoin_value,"1", class: 'form-control', :min => 1, :step => 'any', :required => true
+      .col-sm-3
+        = select_tag 'BCurrency', options_for_select(currency_code_with_name),class:'form-control'
+      .col-sm-3
+        = submit_tag "Convert", :id => "bittocurrency", :class => "form-control btn btn-success"
+      .col-sm-3.text-center.padding
+        span.label.label-default#bit_to_curr

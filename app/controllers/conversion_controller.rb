@@ -4,7 +4,7 @@ class ConversionController < ApplicationController
   end
 
   def bitcoin_to_currency
-    render :json =>  conversion_service.bitcoin_to_currency
+    render :json => conversion_service.bitcoin_to_currency
   end
 
   private

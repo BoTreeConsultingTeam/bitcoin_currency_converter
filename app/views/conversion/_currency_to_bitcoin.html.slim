@@ -1,15 +1,13 @@
-h3 Convert Currency to Bitcoin
-.row
-  .col-sm-3
-    span.label.label-default Select Currency
-    = select_tag 'Currency', options_for_select(currency_code_with_name),class:'form-control'
-  .col-sm-3
-    span.label.label-default Enter Value
-    = number_field_tag :value, "1", class: 'form-control', :min => 1, :step => 'any', :required => true
-  .col-sm-3
-    span.label.label-default Convert to Bitcoin
-    = submit_tag "Submit", :id => "convert", :class => "form-control btn btn-success"
-  .col-sm-3.text-center.padding
-    h6#result
-br/
-br/
+.panel.panel-info
+  .panel-heading
+    Convert Currency to Bitcoin
+  .panel-body
+    .row
+      .col-sm-3
+        = select_tag 'Currency', options_for_select(currency_code_with_name),class:'form-control'
+      .col-sm-3
+        = number_field_tag :value, "1", class: 'form-control', :min => 1, :step => 'any', :required => true
+      .col-sm-3
+        = submit_tag "Convert", :id => "convert", :class => "form-control btn btn-success"
+      .col-sm-3.text-center.padding
+        span.label.label-default#result

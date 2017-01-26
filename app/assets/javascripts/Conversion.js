@@ -3,7 +3,7 @@ Currency = {};
 Currency.Convert = {
   toBitcoin: function(){
     $('#convert').on("click",function(){
-      if($('#value').val().length>0){
+      if($('#value').val().length>0 && parseInt($('#value').val())>0){
         var p =  $.post( "/currency_to_bitcoin", {conversion: { currency: $('#Currency').val(),value: $('#value').val() }} );
         p.done(function( data ) {
           $( "#result" ).empty().append("Bitcoin " + data );
@@ -11,12 +11,14 @@ Currency.Convert = {
         .fail(function() {
           alert( "Invalid Value" );
         });
+      }else{
+        alert("Invalid Value");
       }
     });
   },
   toCurrency: function(){
     $('#bittocurrency').on("click",function(){
-      if($('#bitcoin_value').val().length>0){
+      if($('#bitcoin_value').val().length>0 && parseInt($('#bitcoin_value').val())>0){
         var p =  $.post( "/bitcoin_to_currency", {conversion: { currency: $('#BCurrency').val(),value: $('#bitcoin_value').val()}});
         p.done(function( data ) {
           $( "#bit_to_curr" ).empty().append($('#BCurrency').val()+" "+ data );
@@ -24,6 +26,8 @@ Currency.Convert = {
         .fail(function() {
           alert( "Invalid Value" );
         });
+      }else{
+        alert("Invalid Value");
       }
     });
   }

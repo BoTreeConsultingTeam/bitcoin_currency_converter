@@ -3,17 +3,17 @@ html
   head
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
     title
-      = content_for?(:title) ? yield(:title) : 'Bitcoin Converter'
+      = content_for?(:title) ? yield(:title) : 'Converter For Bitcoin'
     meta content="systemlord.me" name="author" /
-    meta property="og:title" content="Bitcoin Converter: convert bintcoin to currency and vice versa"/
-    meta name="twitter:title" content="Bitcoin Converter: BTC/mBTC/Bits/Satoshis/USD/EUR/ETH/LTC/MORE"/
+    meta property="og:title" content="Converter For Bitcoin: convert bintcoin to currency and vice versa"/
+    meta name="twitter:title" content="Converter For Bitcoin: convert bintcoin to currency and vice versa"/
     meta content="website" property="og:type" /
     meta content="https://converttobitcoin.herokuapp.com/" property="og:url" /
     meta content=("converttobitcoin.herokuapp.com India") property="og:site_name" /
     meta content="en_IN" property="og:locale" /
-    meta content="The CoinDesk Bitcoin Price Index provides the latest and most accurate bitcoin price using an average from the world&#039;s leading exchanges." property="og:description" /
+    meta content="convert bintcoin to currency and vice versa" property="og:description" /
 
-    meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Convert To Bitcoin'}"
+    meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Converter For Bitcoin'}"
     
     link href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" rel="stylesheet" /
     == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => 'reload'
